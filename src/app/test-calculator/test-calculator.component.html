@@ -1,0 +1,12 @@
+<div class="calculator">
+  <input type="number" [(ngModel)]="first" />
+  <select [(ngModel)]="operation">
+    @for (item of operations; track item) {
+    <option [value]="item">{{ item }}</option>
+    }
+  </select>
+  <!-- <input type="text" [(ngModel)]="operation" /> -->
+  <input type="number" [(ngModel)]="second" />
+  <button (click)="calc()">=</button>
+  <span>{{ result ? result : "Заполните поля" }}</span>
+</div>
